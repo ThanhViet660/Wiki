@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch sử cập nhật - VietCraftUpgrade Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-effects"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
+
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="logo">⚒️</span> VCU Wiki</a>
+  <button class="menu-toggle" aria-label="Menu">☰</button>
+  <ul class="navbar-center">
+    <li><a href="index.html">Trang chủ</a></li>
+    <li><a href="features.html">Tính năng</a></li>
+    <li><a href="commands.html">Lệnh & Quyền</a></li>
+    <li><a href="config.html">Cấu hình</a></li>
+    <li><a href="guide.html">Hướng dẫn</a></li>
+    <li><a href="changelog.html" class="active">Cập nhật</a></li>
+  </ul>
+  <div class="navbar-right">
+    <button class="search-trigger">🔍 <span>Tìm kiếm...</span> <kbd>Ctrl+K</kbd></button>
+    <span class="navbar-version">v1.0.0</span>
+  </div>
+</nav>
+
+<div id="search-overlay" class="search-overlay"><div class="search-modal"><div class="search-input-wrap"><span class="search-icon">🔍</span><input id="search-input" type="text" placeholder="Tìm lệnh, quyền, cấu hình, hướng dẫn..." autocomplete="off"><button class="close-btn">ESC</button></div><div id="search-results" class="search-results"><div class="search-empty">Nhập từ khóa để tìm kiếm...</div></div><div class="search-footer"><span><kbd>↑↓</kbd> Di chuyển</span><span><kbd>Enter</kbd> Mở</span><span><kbd>Esc</kbd> Đóng</span></div></div></div>
+
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Trang chủ</a> <span>/</span> <span>Cập nhật</span></div>
+    <h1>📝 Lịch sử cập nhật</h1>
+    <p>Các bản update, tính năng mới, và sửa lỗi</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+
+    <div class="timeline reveal">
+      <!-- v1.0.0 -->
+      <div id="v100" class="timeline-item">
+        <div class="tl-date">24/03/2026</div>
+        <div class="tl-title">v1.0.0 — Phát hành chính thức 🎉 <span class="tl-tag new">RELEASE</span></div>
+        <div class="tl-body">
+          <p style="margin-bottom:8px;">Bản phát hành đầu tiên với đầy đủ tính năng.</p>
+          <h4 style="margin-bottom:6px;font-size:0.88rem;">✨ Tính năng mới</h4>
+          <ul>
+            <li>🔄 <strong>Hệ thống trao đổi hoàn chỉnh</strong> — Groups, Categories, Recipes, Ingredients</li>
+            <li>⬆️ <strong>Nâng cấp vật phẩm</strong> — <code>/vcu upgrade</code> auto-detect level</li>
+            <li>📋 <strong>Select Menu</strong> — <code>/vcu select</code> quét inventory tìm vật phẩm nâng cấp</li>
+            <li>🛠️ <strong>Editor GUI</strong> — quản lý toàn bộ qua giao diện trong game</li>
+            <li>📦 <strong>VietStorage</strong> — lấy nguyên liệu từ kho</li>
+            <li>🎨 <strong>Custom Layout</strong> — layout menu riêng cho từng category</li>
+            <li>🎲 <strong>Tỉ lệ thành công</strong> — cấu hình tỉ lệ + mất/giữ nguyên liệu</li>
+            <li>⚡ <strong>Auto-Create</strong> — tạo nhanh chuỗi recipe nâng cấp</li>
+            <li>🔢 <strong>Shift Exchange</strong> — trao đổi nhiều với số lượng tùy chỉnh</li>
+            <li>💬 <strong>MiniMessage</strong> — hỗ trợ đầy đủ cho mọi text</li>
+          </ul>
+          <h4 style="margin:12px 0 6px;font-size:0.88rem;">🎮 Lệnh</h4>
+          <ul>
+            <li><code>/vcu open [path] [player]</code> — mở menu (hỗ trợ path, target player)</li>
+            <li><code>/vcu upgrade</code> — nâng cấp item trên tay</li>
+            <li><code>/vcu select</code> — xem danh sách nâng cấp</li>
+            <li><code>/vcu editor</code> — mở editor</li>
+            <li><code>/vcu reload</code> — reload plugin</li>
+          </ul>
+          <h4 style="margin:12px 0 6px;font-size:0.88rem;">🔗 Tích hợp</h4>
+          <ul>
+            <li>MMOItems — hệ thống vật phẩm</li>
+            <li>NightCore — framework</li>
+            <li>VietStorage — kho lưu trữ (tùy chọn)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v0.9.0 -->
+      <div id="v090" class="timeline-item">
+        <div class="tl-date">22/03/2026</div>
+        <div class="tl-title">v0.9.0 — Beta <span class="tl-tag improve">IMPROVE</span></div>
+        <div class="tl-body">
+          <h4 style="margin-bottom:6px;font-size:0.88rem;">🔧 Cải tiến</h4>
+          <ul>
+            <li>🔢 Thêm <strong>Shift Exchange</strong> — chọn số lượng trao đổi với Shift+Right Click</li>
+            <li>📝 Thêm <code>%ingredient_status%</code> format tùy chỉnh — hiển thị ✔/✘ cho số lượng đủ/thiếu</li>
+            <li>🛠️ Cải tiến Editor menus — redesign interface, loại bỏ menu thừa</li>
+            <li>🎨 Tích hợp Recipe Layout Editor vào danh sách recipe</li>
+          </ul>
+          <h4 style="margin:12px 0 6px;font-size:0.88rem;">🐛 Sửa lỗi</h4>
+          <ul>
+            <li>Sửa lỗi ingredient dialog không hiển thị đúng khi edit</li>
+            <li>Sửa lỗi menu không refresh sau khi chỉnh sửa recipe</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v0.8.0 -->
+      <div id="v080" class="timeline-item">
+        <div class="tl-date">21/03/2026</div>
+        <div class="tl-title">v0.8.0 — Alpha <span class="tl-tag new">NEW</span></div>
+        <div class="tl-body">
+          <h4 style="margin-bottom:6px;font-size:0.88rem;">✨ Tính năng mới</h4>
+          <ul>
+            <li>📦 Tích hợp <strong>VietStorage</strong> — AllowStorage cho Vanilla ingredients</li>
+            <li>🛠️ Hệ thống <strong>Dialog</strong> cho editor — Group, Category, Recipe, Ingredient creation dialogs</li>
+            <li>🎨 <strong>Recipe Layout Editor</strong> — kéo thả chỉnh vị trí slot recipe</li>
+            <li>📁 Hỗ trợ <strong>Standalone Category</strong> — category không cần group</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v0.7.0 -->
+      <div id="v070" class="timeline-item">
+        <div class="tl-date">19/03/2026</div>
+        <div class="tl-title">v0.7.0 — Prototype <span class="tl-tag new">NEW</span></div>
+        <div class="tl-body">
+          <h4 style="margin-bottom:6px;font-size:0.88rem;">✨ Tính năng mới</h4>
+          <ul>
+            <li>🔄 Hệ thống trao đổi cốt lõi — Exchange Manager</li>
+            <li>📋 Menu hệ thống — Main, Category, Detail Menu</li>
+            <li>⬆️ Lệnh <code>/vcu upgrade</code></li>
+            <li>🎲 Tỉ lệ thành công + Lose Ingredients config</li>
+            <li>🛠️ Editor GUI cơ bản</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer"><p>© 2026 VietCraftUpgrade — Được phát triển bởi <strong>ThanhViet</strong></p></footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wiki hướng dẫn chi tiết plugin VietCraftUpgrade - Hệ thống trao đổi & nâng cấp vật phẩm Minecraft">
+  <title>VietCraftUpgrade Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-effects"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="logo">⚒️</span> VCU Wiki</a>
+  <button class="menu-toggle" aria-label="Menu">☰</button>
+  <ul class="navbar-center">
+    <li><a href="index.html" class="active">Trang chủ</a></li>
+    <li><a href="features.html">Tính năng</a></li>
+    <li><a href="commands.html">Lệnh & Quyền</a></li>
+    <li><a href="config.html">Cấu hình</a></li>
+    <li><a href="guide.html">Hướng dẫn</a></li>
+    <li><a href="changelog.html">Cập nhật</a></li>
+  </ul>
+  <div class="navbar-right">
+    <button class="search-trigger">🔍 <span>Tìm kiếm...</span> <kbd>Ctrl+K</kbd></button>
+    <span class="navbar-version">v1.0.0</span>
+  </div>
+</nav>
+
+<!-- Search Overlay -->
+<div id="search-overlay" class="search-overlay">
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <span class="search-icon">🔍</span>
+      <input id="search-input" type="text" placeholder="Tìm lệnh, quyền, cấu hình, hướng dẫn..." autocomplete="off">
+      <button class="close-btn">ESC</button>
+    </div>
+    <div id="search-results" class="search-results">
+      <div class="search-empty">Nhập từ khóa để tìm kiếm...</div>
+    </div>
+    <div class="search-footer">
+      <span><kbd>↑↓</kbd> Di chuyển</span>
+      <span><kbd>Enter</kbd> Mở</span>
+      <span><kbd>Esc</kbd> Đóng</span>
+    </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <h1>VietCraftUpgrade</h1>
+  <p>Hệ thống trao đổi & nâng cấp vật phẩm MMOItems toàn diện cho máy chủ Minecraft</p>
+  <div class="hero-badges">
+    <span class="badge paper">📄 Paper 1.20+</span>
+    <span class="badge java">☕ Java 21</span>
+    <span class="badge mmo">⚔️ MMOItems</span>
+    <span class="badge nightcore">🌙 NightCore</span>
+  </div>
+</header>
+
+<!-- Quick Nav -->
+<section class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:var(--accent-glow);color:var(--accent-light)">📖</span> Bắt đầu nhanh</div>
+    <p class="section-subtitle reveal">Chọn mục bạn muốn tìm hiểu</p>
+
+    <div class="quick-nav">
+      <a href="features.html" class="quick-nav-card reveal">
+        <div class="qn-icon" style="background:var(--green-bg)">✨</div>
+        <div><h3>Tính năng</h3><p>6 tính năng chính: trao đổi, nâng cấp, editor GUI, VietStorage, layout,...</p></div>
+      </a>
+      <a href="commands.html" class="quick-nav-card reveal">
+        <div class="qn-icon" style="background:var(--yellow-bg)">⌨️</div>
+        <div><h3>Lệnh & Quyền</h3><p>Tất cả lệnh, quyền, bypass và cách sử dụng chi tiết</p></div>
+      </a>
+      <a href="config.html" class="quick-nav-card reveal">
+        <div class="qn-icon" style="background:var(--cyan-bg)">⚙️</div>
+        <div><h3>Cấu hình</h3><p>config.yml, cấu trúc dữ liệu, layout menu, file YAML</p></div>
+      </a>
+      <a href="guide.html" class="quick-nav-card reveal">
+        <div class="qn-icon" style="background:var(--green-bg)">📚</div>
+        <div><h3>Hướng dẫn chi tiết</h3><p>Từng bước cho admin và người chơi, từ cài đặt đến sử dụng</p></div>
+      </a>
+      <a href="changelog.html" class="quick-nav-card reveal">
+        <div class="qn-icon" style="background:rgba(249,115,22,0.1)">📝</div>
+        <div><h3>Lịch sử cập nhật</h3><p>Các bản update, tính năng mới, sửa lỗi</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Requirements -->
+<section class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:var(--red-bg);color:var(--red)">📋</span> Yêu cầu hệ thống</div>
+    <div class="card reveal" style="padding:0;overflow:hidden;">
+      <table class="cmd-table">
+        <thead><tr><th>Thành phần</th><th>Yêu cầu</th><th>Ghi chú</th></tr></thead>
+        <tbody>
+          <tr><td>Máy chủ</td><td><code>PaperMC 1.20+</code></td><td>Spigot không được hỗ trợ</td></tr>
+          <tr><td>Java</td><td><code>Java 21</code> trở lên</td><td>Bắt buộc</td></tr>
+          <tr><td>NightCore</td><td>Phiên bản mới nhất</td><td>Framework cốt lõi</td></tr>
+          <tr><td>MMOItems</td><td>Phiên bản mới nhất</td><td>Hệ thống vật phẩm</td></tr>
+          <tr><td>VietStorage</td><td>Tùy chọn</td><td>Lấy nguyên liệu từ kho</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert tip reveal">💡 <strong>Mẹo:</strong> Cài đặt VietStorage để người chơi có thể sử dụng nguyên liệu từ kho thay vì chỉ từ inventory.</div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 VietCraftUpgrade — Được phát triển bởi <strong>ThanhViet</strong></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

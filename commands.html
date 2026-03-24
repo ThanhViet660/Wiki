@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lệnh & Quyền - VietCraftUpgrade Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-effects"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
+
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="logo">⚒️</span> VCU Wiki</a>
+  <button class="menu-toggle" aria-label="Menu">☰</button>
+  <ul class="navbar-center">
+    <li><a href="index.html">Trang chủ</a></li>
+    <li><a href="features.html">Tính năng</a></li>
+    <li><a href="commands.html" class="active">Lệnh & Quyền</a></li>
+    <li><a href="config.html">Cấu hình</a></li>
+    <li><a href="guide.html">Hướng dẫn</a></li>
+    <li><a href="changelog.html">Cập nhật</a></li>
+  </ul>
+  <div class="navbar-right">
+    <button class="search-trigger">🔍 <span>Tìm kiếm...</span> <kbd>Ctrl+K</kbd></button>
+    <span class="navbar-version">v1.0.0</span>
+  </div>
+</nav>
+
+<div id="search-overlay" class="search-overlay"><div class="search-modal"><div class="search-input-wrap"><span class="search-icon">🔍</span><input id="search-input" type="text" placeholder="Tìm lệnh, quyền, cấu hình, hướng dẫn..." autocomplete="off"><button class="close-btn">ESC</button></div><div id="search-results" class="search-results"><div class="search-empty">Nhập từ khóa để tìm kiếm...</div></div><div class="search-footer"><span><kbd>↑↓</kbd> Di chuyển</span><span><kbd>Enter</kbd> Mở</span><span><kbd>Esc</kbd> Đóng</span></div></div></div>
+
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Trang chủ</a> <span>/</span> <span>Lệnh & Quyền</span></div>
+    <h1>⌨️ Lệnh & Quyền</h1>
+    <p>Toàn bộ lệnh và permission nodes của VietCraftUpgrade</p>
+  </div>
+</header>
+
+<!-- Commands -->
+<section id="commands" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:var(--yellow-bg);color:var(--yellow)">⌨️</span> Danh sách lệnh</div>
+    <p class="section-subtitle reveal">Alias: <code>/vietcraftupgrade</code> hoặc <code>/vcu</code></p>
+
+    <div class="card reveal" style="padding:0;overflow:hidden;margin-bottom:2rem;">
+      <div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:center;">
+        <span>🔍</span>
+        <input id="cmd-search" type="text" placeholder="Lọc lệnh..." style="background:none;border:none;color:var(--text-primary);font-size:0.9rem;width:100%;outline:none;font-family:inherit;">
+      </div>
+      <table class="cmd-table">
+        <thead><tr><th>Lệnh</th><th>Mô tả</th><th>Quyền</th><th>Ghi chú</th></tr></thead>
+        <tbody>
+          <tr id="cmd-reload">
+            <td><code>/vcu reload</code></td>
+            <td>Tải lại toàn bộ config, messages, và dữ liệu</td>
+            <td><span class="perm-tag">vietcraftupgrade.command.reload</span></td>
+            <td>Chỉ admin</td>
+          </tr>
+          <tr id="cmd-editor">
+            <td><code>/vcu editor</code></td>
+            <td>Mở Editor GUI để quản lý toàn bộ hệ thống trao đổi</td>
+            <td><span class="perm-tag">vietcraftupgrade.command.editor</span></td>
+            <td>Chỉ player</td>
+          </tr>
+          <tr id="cmd-open">
+            <td><code>/vcu open [đường_dẫn] [player]</code></td>
+            <td>Mở menu trao đổi. Có thể chỉ định category cụ thể hoặc mở cho người khác</td>
+            <td><span class="perm-tag">vietcraftupgrade.command.open</span></td>
+            <td>Chỉ player</td>
+          </tr>
+          <tr id="cmd-upgrade">
+            <td><code>/vcu upgrade</code></td>
+            <td>Nâng cấp vật phẩm MMOItem đang cầm trên tay lên level tiếp theo</td>
+            <td><span class="perm-tag">vietcraftupgrade.command.upgrade</span></td>
+            <td>Chỉ player</td>
+          </tr>
+          <tr id="cmd-select">
+            <td><code>/vcu select</code></td>
+            <td>Quét inventory, hiện danh sách vật phẩm có công thức nâng cấp</td>
+            <td><span class="perm-tag">vietcraftupgrade.command.select</span></td>
+            <td>Chỉ player</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Open command details -->
+    <div class="card reveal" style="margin-bottom:1rem;">
+      <h3 style="margin-bottom:1rem;">📂 Chi tiết lệnh <code>/vcu open</code></h3>
+      <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1rem;">Lệnh linh hoạt nhất, có nhiều cách sử dụng:</p>
+      <table class="cmd-table">
+        <thead><tr><th>Cú pháp</th><th>Kết quả</th><th>Ví dụ</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>/vcu open</code></td>
+            <td>Mở menu chính (danh sách tất cả groups)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>/vcu open &lt;category&gt;</code></td>
+            <td>Mở thẳng category đơn lẻ (standalone)</td>
+            <td><code>/vcu open armor</code></td>
+          </tr>
+          <tr>
+            <td><code>/vcu open &lt;group/category&gt;</code></td>
+            <td>Mở category trong group cụ thể</td>
+            <td><code>/vcu open weapons/fire_sword</code></td>
+          </tr>
+          <tr>
+            <td><code>/vcu open &lt;path&gt; &lt;player&gt;</code></td>
+            <td>Mở menu cho người chơi khác (cần quyền <code>open.others</code>)</td>
+            <td><code>/vcu open armor Steve</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="alert info" style="margin-top:1rem;">ℹ️ Nếu đường dẫn không hợp lệ, plugin tự mở menu chính thay vì báo lỗi.</div>
+    </div>
+
+    <!-- Upgrade command details -->
+    <div class="card reveal" style="margin-bottom:1rem;">
+      <h3 style="margin-bottom:1rem;">⬆️ Chi tiết lệnh <code>/vcu upgrade</code></h3>
+      <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1rem;">Quy trình xử lý khi chạy lệnh:</p>
+      <div class="steps">
+        <div class="step-item"><h4>Kiểm tra vật phẩm trên tay</h4><p>Phải đang cầm vật phẩm (không phải tay trống)</p></div>
+        <div class="step-item"><h4>Kiểm tra MMOItem</h4><p>Vật phẩm phải là MMOItem hợp lệ (có Type và ID)</p></div>
+        <div class="step-item"><h4>Phân tích level</h4><p>Tách ID để tìm level hiện tại: <code>FIRESWORD_1</code> → Level 1</p></div>
+        <div class="step-item"><h4>Tìm recipe nâng cấp</h4><p>Tìm recipe có Result Type/ID trùng với level tiếp theo: <code>FIRESWORD_2</code></p></div>
+        <div class="step-item"><h4>Mở Detail Menu</h4><p>Hiển thị chi tiết recipe với nguyên liệu cần thiết để trao đổi</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Permissions -->
+<section id="permissions" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:rgba(168,85,247,0.1);color:var(--purple)">🔒</span> Hệ thống quyền</div>
+    <p class="section-subtitle reveal">Prefix: <code>vietcraftupgrade.</code></p>
+
+    <div class="tabs reveal">
+      <button class="tab-btn active" data-tab="perm-cmd">🎮 Lệnh</button>
+      <button class="tab-btn" data-tab="perm-bypass">⚡ Bypass</button>
+      <button class="tab-btn" data-tab="perm-wildcard">🌟 Wildcard</button>
+    </div>
+
+    <div id="perm-cmd" class="tab-content active">
+      <div class="card" style="padding:0;overflow:hidden;">
+        <table class="cmd-table">
+          <thead><tr><th>Permission</th><th>Mô tả</th><th>Mặc định</th></tr></thead>
+          <tbody>
+            <tr><td><span class="perm-tag">vietcraftupgrade.command.reload</span></td><td>Sử dụng <code>/vcu reload</code></td><td>OP</td></tr>
+            <tr><td><span class="perm-tag">vietcraftupgrade.command.open</span></td><td>Mở menu trao đổi</td><td>OP</td></tr>
+            <tr><td><span class="perm-tag">vietcraftupgrade.command.open.others</span></td><td>Mở menu cho người khác</td><td>OP</td></tr>
+            <tr><td><span class="perm-tag">vietcraftupgrade.command.editor</span></td><td>Truy cập Editor GUI</td><td>OP</td></tr>
+            <tr><td><span class="perm-tag">vietcraftupgrade.command.upgrade</span></td><td>Nâng cấp vật phẩm trên tay</td><td>OP</td></tr>
+            <tr><td><span class="perm-tag">vietcraftupgrade.command.select</span></td><td>Xem vật phẩm nâng cấp</td><td>OP</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="alert tip" style="margin-top:1rem;">💡 Nên cấp <code>vietcraftupgrade.command.open</code>, <code>.upgrade</code>, <code>.select</code> cho người chơi thường.</div>
+    </div>
+
+    <div id="perm-bypass" class="tab-content">
+      <div class="card" style="padding:0;overflow:hidden;">
+        <table class="cmd-table">
+          <thead><tr><th>Permission</th><th>Mô tả</th><th>Lưu ý</th></tr></thead>
+          <tbody>
+            <tr><td><span class="perm-tag">vietcraftupgrade.bypass.successrate</span></td><td>Bỏ qua tỉ lệ thành công (luôn 100%)</td><td>Chỉ cho admin/tester</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="alert warn" style="margin-top:1rem;">⚠️ <strong>Cẩn thận:</strong> Không nên cho người chơi thường quyền bypass. Nó sẽ phá vỡ hệ thống tỉ lệ thành công.</div>
+    </div>
+
+    <div id="perm-wildcard" class="tab-content">
+      <div class="card" style="padding:0;overflow:hidden;">
+        <table class="cmd-table">
+          <thead><tr><th>Permission</th><th>Bao gồm</th></tr></thead>
+          <tbody>
+            <tr><td><span class="perm-tag">vietcraftupgrade.*</span></td><td>Tất cả quyền (command + bypass)</td></tr>
+            <tr><td><span class="perm-tag">vietcraftupgrade.command.*</span></td><td>Tất cả 6 quyền lệnh</td></tr>
+            <tr><td><span class="perm-tag">vietcraftupgrade.bypass.*</span></td><td>Tất cả quyền bypass</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card" style="margin-top:1rem;">
+        <h4 style="margin-bottom:8px;">📊 Cấu trúc phân cấp quyền</h4>
+        <div class="config-block">
+          <div class="config-header">📋 Permission Tree</div>
+          <div class="config-body"><span class="key">vietcraftupgrade.*</span>
+  ├── <span class="key">vietcraftupgrade.command.*</span>
+  │   ├── <span class="val">vietcraftupgrade.command.reload</span>
+  │   ├── <span class="val">vietcraftupgrade.command.open</span>
+  │   ├── <span class="val">vietcraftupgrade.command.open.others</span>
+  │   ├── <span class="val">vietcraftupgrade.command.editor</span>
+  │   ├── <span class="val">vietcraftupgrade.command.upgrade</span>
+  │   └── <span class="val">vietcraftupgrade.command.select</span>
+  └── <span class="key">vietcraftupgrade.bypass.*</span>
+      └── <span class="val">vietcraftupgrade.bypass.successrate</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><p>© 2026 VietCraftUpgrade — Được phát triển bởi <strong>ThanhViet</strong></p></footer>
+<script src="script.js"></script>
+</body>
+</html>

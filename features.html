@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tính năng - VietCraftUpgrade Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-effects"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
+
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="logo">⚒️</span> VCU Wiki</a>
+  <button class="menu-toggle" aria-label="Menu">☰</button>
+  <ul class="navbar-center">
+    <li><a href="index.html">Trang chủ</a></li>
+    <li><a href="features.html" class="active">Tính năng</a></li>
+    <li><a href="commands.html">Lệnh & Quyền</a></li>
+    <li><a href="config.html">Cấu hình</a></li>
+    <li><a href="guide.html">Hướng dẫn</a></li>
+    <li><a href="changelog.html">Cập nhật</a></li>
+  </ul>
+  <div class="navbar-right">
+    <button class="search-trigger">🔍 <span>Tìm kiếm...</span> <kbd>Ctrl+K</kbd></button>
+    <span class="navbar-version">v1.0.0</span>
+  </div>
+</nav>
+
+<div id="search-overlay" class="search-overlay"><div class="search-modal"><div class="search-input-wrap"><span class="search-icon">🔍</span><input id="search-input" type="text" placeholder="Tìm lệnh, quyền, cấu hình, hướng dẫn..." autocomplete="off"><button class="close-btn">ESC</button></div><div id="search-results" class="search-results"><div class="search-empty">Nhập từ khóa để tìm kiếm...</div></div><div class="search-footer"><span><kbd>↑↓</kbd> Di chuyển</span><span><kbd>Enter</kbd> Mở</span><span><kbd>Esc</kbd> Đóng</span></div></div></div>
+
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Trang chủ</a> <span>/</span> <span>Tính năng</span></div>
+    <h1>✨ Tính năng chính</h1>
+    <p>Tất cả tính năng được tích hợp trong VietCraftUpgrade</p>
+  </div>
+</header>
+
+<section id="feat-exchange" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:var(--green-bg);color:var(--green)">🔄</span> Hệ thống trao đổi vật phẩm</div>
+    <div class="card reveal">
+      <p style="color:var(--text-secondary);margin-bottom:1rem;">Hệ thống cốt lõi cho phép người chơi trao đổi nguyên liệu để nhận vật phẩm mới theo công thức được admin cấu hình.</p>
+      <ul style="padding-left:1.5rem;color:var(--text-secondary);font-size:0.9rem;">
+        <li>Hỗ trợ cả <strong>MMOItems</strong> (SWORD, BOW, ARMOR, MATERIAL...) và <strong>Vanilla Items</strong> (DIAMOND, IRON_INGOT...)</li>
+        <li>Tổ chức theo cấu trúc phân cấp: <strong>Group → Category → Recipe → Ingredient</strong></li>
+        <li>Mỗi recipe có kết quả (Result) và danh sách nguyên liệu (Ingredients)</li>
+        <li>Hỗ trợ trao đổi 1 lần hoặc nhiều lần liên tiếp</li>
+        <li>Hiển thị trạng thái nguyên liệu (đủ/thiếu) theo thời gian thực</li>
+        <li>Menu GUI đẹp mắt với MiniMessage formatting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="feat-upgrade" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:var(--yellow-bg);color:var(--yellow)">⬆️</span> Nâng cấp vật phẩm</div>
+    <div class="card reveal">
+      <p style="color:var(--text-secondary);margin-bottom:1rem;">Tự động tìm công thức nâng cấp dựa trên hệ thống level. Plugin phân tích ID vật phẩm để xác định level hiện tại và tìm recipe cho level tiếp theo.</p>
+      <div class="card-grid" style="margin-top:1rem;">
+        <div class="card" style="background:var(--bg-glass)">
+          <h4 style="color:var(--yellow);margin-bottom:6px;">🔍 Auto-Detect Level</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary)">Phân tích ID: <code>FIRESWORD_1</code> → Level 1. Tự tìm recipe có result là <code>FIRESWORD_2</code></p>
+        </div>
+        <div class="card" style="background:var(--bg-glass)">
+          <h4 style="color:var(--yellow);margin-bottom:6px;">📋 Select Menu</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary)">Quét toàn bộ inventory, liệt kê tất cả vật phẩm có công thức nâng cấp</p>
+        </div>
+      </div>
+      <div class="alert info" style="margin-top:1rem;">ℹ️ Quy ước đặt tên ID: <code>ITEMNAME_LEVEL</code> (ví dụ: <code>FIRESWORD_1</code>, <code>FIRESWORD_2</code>, <code>FIRESWORD_3</code>)</div>
+    </div>
+  </div>
+</section>
+
+<section id="feat-editor" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:var(--cyan-bg);color:var(--cyan)">🛠️</span> Editor GUI trong game</div>
+    <div class="card reveal">
+      <p style="color:var(--text-secondary);margin-bottom:1rem;">Quản lý toàn bộ hệ thống trao đổi trực tiếp trong game mà không cần chỉnh sửa file YAML.</p>
+      <div class="card-grid" style="margin-top:1rem;">
+        <div class="card" style="background:var(--bg-glass)">
+          <h4 style="color:var(--cyan);margin-bottom:6px;">📁 Group Editor</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary)">Tạo, xóa, đổi tên group. Xem danh sách category trong group.</p>
+        </div>
+        <div class="card" style="background:var(--bg-glass)">
+          <h4 style="color:var(--cyan);margin-bottom:6px;">📋 Category Editor</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary)">Tạo, xóa, đổi tên, di chuyển giữa groups, thay đổi layout.</p>
+        </div>
+        <div class="card" style="background:var(--bg-glass)">
+          <h4 style="color:var(--cyan);margin-bottom:6px;">🧪 Recipe Editor</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary)">Tạo, xóa, đổi tên, thay đổi Result, tùy chỉnh slot/page.</p>
+        </div>
+        <div class="card" style="background:var(--bg-glass)">
+          <h4 style="color:var(--cyan);margin-bottom:6px;">🧱 Ingredient Editor</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary)">Thêm, xóa, sửa nguyên liệu: số lượng, tên, AllowStorage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="feat-storage" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:rgba(168,85,247,0.1);color:var(--purple)">📦</span> Tích hợp VietStorage</div>
+    <div class="card reveal">
+      <p style="color:var(--text-secondary);margin-bottom:1rem;">Khi VietStorage được cài đặt, nguyên liệu có thể được lấy từ cả inventory và kho lưu trữ.</p>
+      <ul style="padding-left:1.5rem;color:var(--text-secondary);font-size:0.9rem;">
+        <li>Bật/tắt cho <strong>từng ingredient</strong> riêng biệt (<code>AllowStorage: true/false</code>)</li>
+        <li><strong>Ưu tiên inventory</strong>: lấy từ inventory trước, thiếu bao nhiêu thì lấy từ kho</li>
+        <li>Chỉ hỗ trợ cho nguyên liệu loại <strong>VANILLA</strong> (vật phẩm Minecraft gốc)</li>
+        <li>Tự động phát hiện VietStorage — không cần cấu hình thêm</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="feat-autocreate" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:rgba(249,115,22,0.1);color:var(--orange)">⚡</span> Auto-Create Recipes</div>
+    <div class="card reveal">
+      <p style="color:var(--text-secondary);margin-bottom:1rem;">Tạo nhanh hàng loạt recipe nâng cấp theo chuỗi level chỉ với vài thao tác trong Editor.</p>
+      <div class="config-block" style="margin-top:1rem;">
+        <div class="config-header">📋 Ví dụ: Auto-create 5 level kiếm lửa</div>
+        <div class="config-body"><span class="comment"># Chỉ cần nhập:</span>
+<span class="key">Result Type:</span> <span class="val">SWORD</span>
+<span class="key">Result Base ID:</span> <span class="val">FIRESWORD</span>    <span class="comment"># → FIRESWORD_1, FIRESWORD_2, ...</span>
+<span class="key">Max Level:</span> <span class="val">5</span>
+<span class="key">Ingredient Type:</span> <span class="val">MATERIAL</span>
+<span class="key">Ingredient ID:</span> <span class="val">UPGRADE_STONE</span>
+<span class="key">Ingredient Increment:</span> <span class="val">3</span>    <span class="comment"># Level 1: 3, Level 2: 6, Level 3: 9,...</span>
+
+<span class="comment"># Tự động tạo ra:</span>
+<span class="comment"># - FIRESWORD_1: cần 3 UPGRADE_STONE</span>
+<span class="comment"># - FIRESWORD_2: cần 6 UPGRADE_STONE + FIRESWORD_1</span>
+<span class="comment"># - FIRESWORD_3: cần 9 UPGRADE_STONE + FIRESWORD_2</span>
+<span class="comment"># - ...</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="feat-shift" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:var(--green-bg);color:var(--green)">🔢</span> Shift Exchange</div>
+    <div class="card reveal">
+      <p style="color:var(--text-secondary);margin-bottom:1rem;">Trao đổi nhiều lần liên tiếp với số lượng tùy chỉnh thay vì click từng lần một.</p>
+      <ul style="padding-left:1.5rem;color:var(--text-secondary);font-size:0.9rem;">
+        <li><strong>Shift + Right Click</strong> trên recipe: mở dialog chọn số lượng</li>
+        <li><strong>Shift + Left Click</strong> trên recipe: trao đổi theo số lượng đã chọn</li>
+        <li>Số lượng mặc định: <strong>5</strong>, có thể thay đổi bất cứ lúc nào</li>
+        <li>Số lượng được lưu vào <code>PersistentDataContainer</code> của player</li>
+        <li>Plugin tự dừng khi hết nguyên liệu hoặc đầy inventory</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="feat-layout" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:var(--red-bg);color:var(--red)">🎨</span> Custom Layout Menu</div>
+    <div class="card reveal">
+      <p style="color:var(--text-secondary);margin-bottom:1rem;">Mỗi category có thể có giao diện menu riêng biệt.</p>
+      <ul style="padding-left:1.5rem;color:var(--text-secondary);font-size:0.9rem;">
+        <li>File layout mặc định: <code>menu/category/default.yml</code></li>
+        <li>Tạo file mới trong <code>menu/category/</code> để thêm layout</li>
+        <li>Gán layout cho category qua Editor hoặc file YAML (<code>Layout: "tên_layout"</code>)</li>
+        <li>Drag-and-drop <strong>Recipe Layout Editor</strong> để chỉnh vị trí slot recipe</li>
+        <li>Recipe có thể được đặt cố định vào slot và page cụ thể</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="feat-success" class="section">
+  <div class="container">
+    <div class="section-title reveal"><span class="icon" style="background:var(--yellow-bg);color:var(--yellow)">🎲</span> Tỉ lệ thành công</div>
+    <div class="card reveal">
+      <p style="color:var(--text-secondary);margin-bottom:1rem;">Hệ thống tỉ lệ thành công có thể cấu hình, tạo yếu tố may rủi cho gameplay.</p>
+      <div class="card-grid" style="margin-top:1rem;">
+        <div class="card" style="background:var(--bg-glass)">
+          <h4 style="color:var(--green);margin-bottom:6px;">✅ Thành công</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary)">Nguyên liệu bị mất, người chơi nhận Result item. Sound + message thành công.</p>
+        </div>
+        <div class="card" style="background:var(--bg-glass)">
+          <h4 style="color:var(--red);margin-bottom:6px;">❌ Thất bại</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary)">Tùy config: nguyên liệu mất hoặc trả lại. Sound + message thất bại.</p>
+        </div>
+      </div>
+      <div class="alert warn" style="margin-top:1rem;">⚠️ Người có quyền <code>vietcraftupgrade.bypass.successrate</code> luôn thành công 100%</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><p>© 2026 VietCraftUpgrade — Được phát triển bởi <strong>ThanhViet</strong></p></footer>
+<script src="script.js"></script>
+</body>
+</html>
