@@ -70,7 +70,6 @@ const PAGE_LABELS = {
 // ── Init ──
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
-  initScrollReveal();
   initTabs();
   initCopyButtons();
   initSearch();
@@ -79,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initParallaxOrbs();
 
-  // Apply staggered reveal class to grids and timelines
+  // Apply staggered reveal class to grids and timelines BEFORE initScrollReveal
   document.querySelectorAll('.card-grid, .quick-nav, .timeline').forEach(el => {
     el.classList.add('reveal-stagger');
     // For timeline, we stagger the timeline items inside
@@ -88,6 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
       el.querySelectorAll('.timeline-item').forEach(item => item.classList.add('reveal'));
     }
   });
+
+  initScrollReveal();
 
   // Re-run scroll reveal to catch newly added elements
   setTimeout(() => window.dispatchEvent(new Event('scroll')), 100);
