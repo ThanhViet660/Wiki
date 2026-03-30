@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="wiki-prefix" content=""/>
-    <title>VietCraftUpgrade - Wiki Documentation</title>
+    <title>Lệnh & Quyền hạn | VietCraftUpgrade Wiki</title>
     <!-- ANTI-FOUC (Flash of Unstyled Content) -->
     <script>document.documentElement.classList.add('js-enabled');</script>
     <style>
@@ -71,7 +71,7 @@
             </div>
             
             <nav class="space-y-1">
-                <a href="index.html" class="flex items-center gap-3 text-[#ff8f73] bg-[#1a1a1a] border-l-2 border-[#ff8f73] px-6 py-3 ml-[-1px] font-medium text-sm">
+                <a href="index.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
                     <span class="material-symbols-outlined text-[20px]">info</span>Giới thiệu
                 </a>
                 
@@ -99,7 +99,7 @@
                     </div>
                 </div>
 
-                <a href="lenh-quyen.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
+                <a href="lenh-quyen.html" class="flex items-center gap-3 text-[#ff8f73] bg-[#1a1a1a] border-l-2 border-[#ff8f73] px-6 py-3 ml-[-1px] font-medium text-sm">
                     <span class="material-symbols-outlined text-[20px]">terminal</span>Lệnh &amp; Quyền
                 </a>
                 <a href="cau-hinh.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
@@ -129,168 +129,210 @@
     </aside>
 
     <!-- Main Content Canvas -->
-    <main class="flex-1 lg:ml-64 p-6 md:p-12 max-w-7xl mx-auto">
-<!-- Hero Section -->
-<section class="mb-20">
-<div class="relative rounded-2xl overflow-hidden mb-12 h-64 md:h-80 flex items-center px-8 md:px-16">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
-<img class="w-full h-full object-cover" data-alt="Futuristic dark Minecraft landscape with neon glowing redstone circuits and abstract cubic architecture in deep space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7hFwul6YMmfKZSeC42WkKElAAOk5JltBJ3BnirpTCXjNmZhlhlJorccweifArb4ntEz7-mloiowzvFf6fe46XS-NfVk9QpHJ3NIT1UNzYf6Y7tI0bOZrE58uZc-fPsgzo2IaDj1OAl0tFypuddl6gpxc2QNd_KKhFkhc5e9zKhDbXHsDi9nx_d_lQAJnoq_R-uHMxIILl_EyB_ku6VbR1eSdb-l2QEFGYREUxsCmyf55gH4fn1iaghlgmfqI8ZWOyhFTfZaMsfIs">
-</img></div>
-<div class="relative z-20 max-w-2xl">
-<h1 class="text-4xl md:text-6xl font-headline font-bold text-on-surface mb-4 tracking-tight leading-none">
-                            VIETCRAFT<span class="text-primary">UPGRADE</span>
+    <main class="pt-24 pb-12 md:pl-72 px-6 max-w-7xl mx-auto">
+<!-- Hero Section Header -->
+<section class="mb-16 relative">
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter uppercase mb-4">
+            Lệnh &amp; <span class="text-primary">Quyền hạn</span>
 </h1>
-<p class="text-on-surface-variant text-lg md:text-xl font-light leading-relaxed">
-                            Wiki Documentation: Chuyển đổi trải nghiệm nâng cấp vật phẩm RPG trong Minecraft với hệ thống Forge hiện đại.
-                        </p>
-</div>
-</div>
-<!-- Introduction Section -->
-<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
-<div class="xl:col-span-2 space-y-8">
-<div>
-<h2 class="text-2xl font-headline font-bold text-primary mb-6 flex items-center gap-2">
-<span class="w-8 h-px bg-primary/30"></span> Giới thiệu
-                            </h2>
-<div class="prose prose-invert max-w-none text-on-surface-variant leading-relaxed space-y-4">
-<p>VietCraftUpgrade là giải pháp toàn diện cho việc quản lý, nâng cấp và phân rã vật phẩm dành cho các máy chủ RPG/Survival. Plugin được thiết kế với giao diện GUI kéo-thả trực quan, tích hợp sâu với hệ thống MMOItems và MythicLib.</p>
-<p>Đội ngũ phát triển tập trung vào hiệu năng tối đa và khả năng tùy biến vô hạn, giúp quản trị viên dễ dàng tạo ra các công thức nâng cấp phức tạp mà không cần can thiệp sâu vào tệp cấu hình YAML.</p>
-</div>
-</div>
-<!-- Requirements Bento -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div class="p-6 bg-surface-container rounded-xl border border-outline-variant/10">
-<h4 class="text-primary font-bold mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">check_circle</span> Requirements
-                                </h4>
-<ul class="space-y-2 text-sm text-on-surface-variant">
-<li class="flex justify-between"><span>Spigot/Paper</span> <span class="text-secondary">1.21.8+</span></li>
-<li class="flex justify-between"><span>Java</span> <span class="text-secondary">21+</span></li>
-<li class="flex justify-between"><span>Dependencies</span> <span class="text-secondary">MMOItems, MythicLib</span></li>
-</ul>
-</div>
-<div class="p-6 bg-surface-container-low rounded-xl border border-error/10">
-<h4 class="text-error font-bold mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">cancel</span> Not Supported
-                                </h4>
-<ul class="space-y-2 text-sm text-on-surface-variant">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-error rounded-full"></span> Folia Platform</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-error rounded-full"></span> Forge/Fabric Hybrid</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-error rounded-full"></span> Legacy Java versions (&lt;21)</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- Side Info / Quick Links -->
-<div class="space-y-6">
-<div class="p-6 glass-card rounded-xl border border-primary/10">
-<h3 class="font-headline font-bold text-on-surface mb-4">Plugin Specs</h3>
-<div class="space-y-4">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">bolt</span>
-</div>
-<div>
-<div class="text-[10px] text-zinc-500 uppercase">Performance</div>
-<div class="text-sm font-medium">Asynchronous Logic</div>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
-<span class="material-symbols-outlined">database</span>
-</div>
-<div>
-<div class="text-[10px] text-zinc-500 uppercase">Storage</div>
-<div class="text-sm font-medium">VietStorage Integration</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<p class="text-on-surface-variant max-w-2xl text-lg font-light leading-relaxed">
+            Tài liệu chi tiết về các câu lệnh điều khiển và hệ thống phân quyền của VietCraftUpgrade. 
+            Được thiết kế để tối ưu hóa việc quản lý máy chủ Minecraft chuyên nghiệp.
+        </p>
 </section>
-<!-- Features Section -->
-<section class="mb-20" id="features">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-headline font-bold text-on-surface uppercase tracking-widest mb-2">Hệ Thống Tính Năng</h2>
-<div class="h-1 w-24 bg-primary mx-auto"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Feature Card 1 -->
-<div class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-<span class="material-symbols-outlined text-6xl">upgrade</span>
-</div>
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">sync_alt</span>
-</div>
-<h3 class="text-xl font-headline font-bold mb-3">Trao đổi &amp; Nâng cấp</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Hệ thống Auto-Detect Level thông minh tự động nhận diện cấp độ vật phẩm và áp dụng Recipe phù hợp.</p>
-</div>
-<!-- Feature Card 2 -->
-<div class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">percent</span>
-</div>
-<h3 class="text-xl font-headline font-bold mb-3">Tỉ lệ thành công</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Thiết lập xác suất thành công chi tiết cho từng bậc nâng cấp, bao gồm tỉ lệ thất bại và giữ nguyên cấp.</p>
-</div>
-<!-- Feature Card 3 -->
-<div class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">keyboard_double_arrow_right</span>
-</div>
-<h3 class="text-xl font-headline font-bold mb-3">Shift Exchange</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Tối ưu hóa quy trình với khả năng nâng cấp hàng loạt vật phẩm chỉ với một lần nhấp chuột (Shift + Click).</p>
-</div>
-<!-- Feature Card 4 -->
-<div class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">content_cut</span>
-</div>
-<h3 class="text-xl font-headline font-bold mb-3">Phân rã vật phẩm</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Cho phép người chơi phá hủy các trang bị cũ để thu hồi nguyên liệu quý hiếm theo tỉ lệ tùy chỉnh.</p>
-</div>
-<!-- Feature Card 5 -->
-<div class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">rocket_launch</span>
-</div>
-<h3 class="text-xl font-headline font-bold mb-3">Hệ thống Booster</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Vật phẩm bổ trợ giúp tăng tỉ lệ thành công hoặc bảo vệ trang bị không bị mất khi nâng cấp thất bại.</p>
-</div>
-<!-- Feature Card 6 -->
-<a class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden block text-left" href="#">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">drag_pan</span>
-</div>
-<h3 class="text-xl font-headline font-bold mb-3">Editor GUI</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Trình chỉnh sửa ngay trong game với giao diện kéo-thả, loại bỏ nhu cầu chỉnh sửa file config phức tạp.</p>
-</a>
-</div>
-</section>
-<!-- Command Block Style Section -->
+<!-- Command List Section (Bento Grid) -->
 <section class="mb-20">
-<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20 shadow-2xl">
-<div class="flex items-center gap-2 mb-6">
-<div class="w-3 h-3 rounded-full bg-error"></div>
-<div class="w-3 h-3 rounded-full bg-tertiary"></div>
-<div class="w-3 h-3 rounded-full bg-primary"></div>
-<span class="ml-4 text-zinc-600 font-mono text-sm">config_example.yml</span>
+<div class="flex items-center gap-3 mb-8">
+<div class="h-8 w-1 bg-primary"></div>
+<h2 class="font-headline text-2xl font-bold tracking-tight">COMMAND LIST (LỆNH)</h2>
 </div>
-<pre class="font-mono text-sm overflow-x-auto text-on-surface-variant leading-relaxed"><span class="text-tertiary">&gt; upgrade-settings:</span>
-    <span class="text-primary-dim">enabled:</span> true
-    <span class="text-primary-dim">broadcast-success:</span> true
-    <span class="text-primary-dim">sound-effect:</span> 'BLOCK_ANVIL_USE'
-    <span class="text-primary-dim">particle:</span> 'FLAME'
-
-<span class="text-tertiary">&gt; recipe-auto-create:</span>
-    <span class="text-primary-dim">prefix:</span> 'LEGENDARY_'
-    <span class="text-primary-dim">levels:</span> 1-20
-    <span class="text-primary-dim">material-cost:</span> 'NETHER_STAR'</pre>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Command Card 1 -->
+<div class="bg-surface-container border border-outline-variant/30 rounded-xl p-6 glow-hover transition-all duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-4xl" data-icon="sync">sync</span>
+</div>
+<code class="text-primary font-bold text-lg mb-2 block">/vcu reload</code>
+<p class="text-on-surface-variant text-sm mb-4">Làm mới toàn bộ tệp cấu hình và dữ liệu hệ thống mà không cần khởi động lại máy chủ.</p>
+<div class="pt-4 border-t border-outline-variant/20 flex flex-col gap-2">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Permission</span>
+<code class="text-xs bg-surface-container-high px-2 py-1 rounded text-tertiary">vcu.admin.reload</code>
+</div>
+</div>
+<!-- Command Card 2 -->
+<div class="bg-surface-container border border-outline-variant/30 rounded-xl p-6 glow-hover transition-all duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-4xl" data-icon="edit_square">edit_square</span>
+</div>
+<code class="text-primary font-bold text-lg mb-2 block">/vcu editor</code>
+<p class="text-on-surface-variant text-sm mb-4">Mở giao diện chỉnh sửa trực quan (GUI Editor) để thiết lập các thông số nâng cấp.</p>
+<div class="pt-4 border-t border-outline-variant/20 flex flex-col gap-2">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Permission</span>
+<code class="text-xs bg-surface-container-high px-2 py-1 rounded text-tertiary">vcu.admin.editor</code>
+</div>
+</div>
+<!-- Command Card 3 -->
+<div class="bg-surface-container border border-outline-variant/30 rounded-xl p-6 glow-hover transition-all duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-4xl" data-icon="door_open">door_open</span>
+</div>
+<code class="text-primary font-bold text-lg mb-2 block">/vcu open</code>
+<p class="text-on-surface-variant text-sm mb-4">Mở bảng nâng cấp chính cho người chơi. Tương tác với hệ thống Forge.</p>
+<div class="pt-4 border-t border-outline-variant/20 flex flex-col gap-2">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Permission</span>
+<code class="text-xs bg-surface-container-high px-2 py-1 rounded text-tertiary">vcu.player.use</code>
+</div>
+</div>
+<!-- Command Card 4 -->
+<div class="bg-surface-container border border-outline-variant/30 rounded-xl p-6 glow-hover transition-all duration-300 relative overflow-hidden group">
+<code class="text-primary font-bold text-lg mb-2 block">/vcu upgrade</code>
+<p class="text-on-surface-variant text-sm mb-4">Lệnh cưỡng bức nâng cấp vật phẩm trên tay người chơi (Chỉ dành cho Admin).</p>
+<div class="pt-4 border-t border-outline-variant/20 flex flex-col gap-2">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Permission</span>
+<code class="text-xs bg-surface-container-high px-2 py-1 rounded text-tertiary">vcu.admin.force</code>
+</div>
+</div>
+<!-- Command Card 5 -->
+<div class="bg-surface-container border border-outline-variant/30 rounded-xl p-6 glow-hover transition-all duration-300 relative overflow-hidden group">
+<code class="text-primary font-bold text-lg mb-2 block">/vcu select</code>
+<p class="text-on-surface-variant text-sm mb-4">Chế độ lựa chọn khối (Selection Tool) để định nghĩa khu vực làm việc của VCU.</p>
+<div class="pt-4 border-t border-outline-variant/20 flex flex-col gap-2">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Permission</span>
+<code class="text-xs bg-surface-container-high px-2 py-1 rounded text-tertiary">vcu.admin.tool</code>
+</div>
+</div>
+<!-- Command Card 6 -->
+<div class="bg-surface-container border border-outline-variant/30 rounded-xl p-6 glow-hover transition-all duration-300 relative overflow-hidden group">
+<code class="text-primary font-bold text-lg mb-2 block">/vcu split</code>
+<p class="text-on-surface-variant text-sm mb-4">Tách vật phẩm hoặc thuộc tính từ các trang bị đã được nâng cấp.</p>
+<div class="pt-4 border-t border-outline-variant/20 flex flex-col gap-2">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Permission</span>
+<code class="text-xs bg-surface-container-high px-2 py-1 rounded text-tertiary">vcu.player.split</code>
+</div>
+</div>
 </div>
 </section>
+<!-- Permission List Section -->
+<section class="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div>
+<div class="flex items-center gap-3 mb-8">
+<div class="h-8 w-1 bg-tertiary"></div>
+<h2 class="font-headline text-2xl font-bold tracking-tight">PLAYER PERMISSIONS</h2>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-low border-l-4 border-primary p-4 flex justify-between items-center group">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-secondary">vietcraftupgrade.command.open</span>
+<span class="text-xs text-on-surface-variant">Cho phép mở menu nâng cấp chính</span>
+</div>
+<span class="material-symbols-outlined text-zinc-600 group-hover:text-primary transition-colors" data-icon="check_circle">check_circle</span>
+</div>
+<div class="bg-surface-container-low border-l-4 border-primary p-4 flex justify-between items-center group">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-secondary">vietcraftupgrade.command.split</span>
+<span class="text-xs text-on-surface-variant">Cho phép sử dụng tính năng tách vật phẩm</span>
+</div>
+<span class="material-symbols-outlined text-zinc-600 group-hover:text-primary transition-colors" data-icon="check_circle">check_circle</span>
+</div>
+<div class="bg-surface-container-low border-l-4 border-primary p-4 flex justify-between items-center group">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-secondary">vietcraftupgrade.bypass.cooldown</span>
+<span class="text-xs text-on-surface-variant">Bỏ qua thời gian chờ khi nâng cấp</span>
+</div>
+<span class="material-symbols-outlined text-zinc-600 group-hover:text-primary transition-colors" data-icon="check_circle">check_circle</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-8">
+<div class="h-8 w-1 bg-error"></div>
+<h2 class="font-headline text-2xl font-bold tracking-tight">ADMIN PERMISSIONS</h2>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container border-l-4 border-error p-4 flex justify-between items-center group">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-secondary">vietcraftupgrade.admin.*</span>
+<span class="text-xs text-on-surface-variant">Quyền hạn tối cao cho tất cả chức năng</span>
+</div>
+<span class="material-symbols-outlined text-error/50 group-hover:text-error transition-colors" data-icon="shield">shield</span>
+</div>
+<div class="bg-surface-container border-l-4 border-error p-4 flex justify-between items-center group">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-secondary">vietcraftupgrade.command.reload</span>
+<span class="text-xs text-on-surface-variant">Tải lại tệp hệ thống config.yml</span>
+</div>
+<span class="material-symbols-outlined text-error/50 group-hover:text-error transition-colors" data-icon="shield">shield</span>
+</div>
+<div class="bg-surface-container border-l-4 border-error p-4 flex justify-between items-center group">
+<div class="flex flex-col">
+<span class="text-sm font-bold text-secondary">vietcraftupgrade.command.editor</span>
+<span class="text-xs text-on-surface-variant">Truy cập giao diện cấu hình trực quan</span>
+</div>
+<span class="material-symbols-outlined text-error/50 group-hover:text-error transition-colors" data-icon="shield">shield</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Configuration Snippet Section -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<div class="h-8 w-1 bg-primary"></div>
+<h2 class="font-headline text-2xl font-bold tracking-tight uppercase">Cấu hình (CONFIG.YML)</h2>
+</div>
+<div class="flex gap-2">
+<span class="w-3 h-3 rounded-full bg-error/40"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary/40"></span>
+<span class="w-3 h-3 rounded-full bg-primary/40"></span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
+<div class="bg-surface-container-high px-4 py-2 flex items-center justify-between border-b border-outline-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-zinc-500" data-icon="description">description</span>
+<span class="text-[10px] font-bold text-zinc-400 font-label">config.yml</span>
+</div>
+<button class="text-[10px] text-primary hover:underline font-bold uppercase tracking-widest">Copy Code</button>
+</div>
+<div class="p-6 overflow-x-auto">
+<pre class="font-body text-sm leading-6"><span class="text-zinc-500"># VietCraftUpgrade Main Configuration</span>
+<span class="text-primary">Settings:</span>
+  <span class="text-tertiary">Language:</span> <span class="text-secondary">"vi_VN"</span>
+  <span class="text-tertiary">Update-Checker:</span> <span class="text-secondary">true</span>
+
+<span class="text-primary">Exchange:</span>
+  <span class="text-tertiary">enabled:</span> <span class="text-secondary">true</span>
+  <span class="text-tertiary">tax-rate:</span> <span class="text-secondary">0.05</span>
+  <span class="text-tertiary">allowed-materials:</span>
+    - <span class="text-secondary">DIAMOND_SWORD</span>
+    - <span class="text-secondary">NETHERITE_SWORD</span>
+
+<span class="text-primary">Split:</span>
+  <span class="text-tertiary">enabled:</span> <span class="text-secondary">true</span>
+  <span class="text-tertiary">cost:</span> <span class="text-secondary">1500.0</span>
+  <span class="text-tertiary">require-permission:</span> <span class="text-secondary">true</span>
+  <span class="text-tertiary">animation-speed:</span> <span class="text-secondary">1.2</span>
+
+<span class="text-zinc-500"># End of Configuration</span></pre>
+</div>
+</div>
+</section>
+<!-- Footer Decoration -->
+<div class="mt-20 flex justify-center opacity-20 pointer-events-none">
+<div class="grid grid-cols-10 gap-1">
+<div class="w-4 h-4 bg-primary"></div>
+<div class="w-4 h-4 bg-zinc-800"></div>
+<div class="w-4 h-4 bg-primary"></div>
+<div class="w-4 h-4 bg-zinc-800"></div>
+<div class="w-4 h-4 bg-zinc-800"></div>
+<div class="w-4 h-4 bg-primary"></div>
+<div class="w-4 h-4 bg-zinc-800"></div>
+<div class="w-4 h-4 bg-zinc-800"></div>
+<div class="w-4 h-4 bg-zinc-800"></div>
+<div class="w-4 h-4 bg-primary"></div>
+</div>
+</div>
 </main>
 
     <!-- Donation Modal -->

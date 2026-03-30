@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="wiki-prefix" content=""/>
-    <title>VietCraftUpgrade - Wiki Documentation</title>
+    <title>VietCraftUpgrade Wiki</title>
     <!-- ANTI-FOUC (Flash of Unstyled Content) -->
     <script>document.documentElement.classList.add('js-enabled');</script>
     <style>
@@ -71,7 +71,7 @@
             </div>
             
             <nav class="space-y-1">
-                <a href="index.html" class="flex items-center gap-3 text-[#ff8f73] bg-[#1a1a1a] border-l-2 border-[#ff8f73] px-6 py-3 ml-[-1px] font-medium text-sm">
+                <a href="index.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
                     <span class="material-symbols-outlined text-[20px]">info</span>Giới thiệu
                 </a>
                 
@@ -111,7 +111,7 @@
                 <a href="huong-dan.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
                     <span class="material-symbols-outlined text-[20px]">menu_book</span>Hướng dẫn GUI
                 </a>
-                <a href="lich-su.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
+                <a href="lich-su.html" class="flex items-center gap-3 text-[#ff8f73] bg-[#1a1a1a] border-l-2 border-[#ff8f73] px-6 py-3 ml-[-1px] font-medium text-sm">
                     <span class="material-symbols-outlined text-[20px]">history</span>Lịch sử
                 </a>
                 
@@ -129,168 +129,175 @@
     </aside>
 
     <!-- Main Content Canvas -->
-    <main class="flex-1 lg:ml-64 p-6 md:p-12 max-w-7xl mx-auto">
-<!-- Hero Section -->
-<section class="mb-20">
-<div class="relative rounded-2xl overflow-hidden mb-12 h-64 md:h-80 flex items-center px-8 md:px-16">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
-<img class="w-full h-full object-cover" data-alt="Futuristic dark Minecraft landscape with neon glowing redstone circuits and abstract cubic architecture in deep space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7hFwul6YMmfKZSeC42WkKElAAOk5JltBJ3BnirpTCXjNmZhlhlJorccweifArb4ntEz7-mloiowzvFf6fe46XS-NfVk9QpHJ3NIT1UNzYf6Y7tI0bOZrE58uZc-fPsgzo2IaDj1OAl0tFypuddl6gpxc2QNd_KKhFkhc5e9zKhDbXHsDi9nx_d_lQAJnoq_R-uHMxIILl_EyB_ku6VbR1eSdb-l2QEFGYREUxsCmyf55gH4fn1iaghlgmfqI8ZWOyhFTfZaMsfIs">
-</img></div>
-<div class="relative z-20 max-w-2xl">
-<h1 class="text-4xl md:text-6xl font-headline font-bold text-on-surface mb-4 tracking-tight leading-none">
-                            VIETCRAFT<span class="text-primary">UPGRADE</span>
+    <main class="md:ml-64 pt-24 pb-12 px-6 md:px-12 max-w-6xl">
+<!-- Header Section -->
+<header class="mb-16">
+<h1 class="text-5xl md:text-7xl font-black font-headline uppercase tracking-tighter text-on-surface mb-4">
+                Lịch sử <span class="text-primary">cập nhật</span>
 </h1>
-<p class="text-on-surface-variant text-lg md:text-xl font-light leading-relaxed">
-                            Wiki Documentation: Chuyển đổi trải nghiệm nâng cấp vật phẩm RPG trong Minecraft với hệ thống Forge hiện đại.
-                        </p>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">
+                Theo dõi tiến trình phát triển của hệ thống VietCraftUpgrade. Từ những dòng mã đầu tiên đến nền tảng tự động hóa UI phức tạp hiện tại.
+            </p>
+</header>
+<!-- Timeline Container -->
+<div class="relative">
+<!-- Vertical Line -->
+<div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-primary/40 via-primary/10 to-transparent md:-translate-x-1/2"></div>
+<!-- Timeline Entries -->
+<div class="space-y-12 md:space-y-24">
+<!-- Version v1.0.2 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between">
+<div class="hidden md:block w-[45%] text-right pr-12">
+<span class="text-primary font-headline text-lg font-bold">24 Tháng 05, 2024</span>
+<h2 class="text-2xl font-bold text-on-surface mt-2">Phân rã &amp; Tự động hóa UI</h2>
+</div>
+<div class="z-10 absolute left-4 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_20px_rgba(255,143,115,0.4)]">
+<span class="material-symbols-outlined text-on-primary text-sm" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
 </div>
 </div>
-<!-- Introduction Section -->
-<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
-<div class="xl:col-span-2 space-y-8">
-<div>
-<h2 class="text-2xl font-headline font-bold text-primary mb-6 flex items-center gap-2">
-<span class="w-8 h-px bg-primary/30"></span> Giới thiệu
-                            </h2>
-<div class="prose prose-invert max-w-none text-on-surface-variant leading-relaxed space-y-4">
-<p>VietCraftUpgrade là giải pháp toàn diện cho việc quản lý, nâng cấp và phân rã vật phẩm dành cho các máy chủ RPG/Survival. Plugin được thiết kế với giao diện GUI kéo-thả trực quan, tích hợp sâu với hệ thống MMOItems và MythicLib.</p>
-<p>Đội ngũ phát triển tập trung vào hiệu năng tối đa và khả năng tùy biến vô hạn, giúp quản trị viên dễ dàng tạo ra các công thức nâng cấp phức tạp mà không cần can thiệp sâu vào tệp cấu hình YAML.</p>
+<div class="pl-12 md:pl-0 md:w-[45%]">
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all group">
+<div class="flex items-center gap-2 md:hidden mb-2">
+<span class="text-primary font-bold text-sm">v1.0.2</span>
+<span class="text-on-surface-variant text-xs">• 24/05/2024</span>
 </div>
+<h3 class="text-xl font-bold text-primary mb-3 md:hidden">Phân rã &amp; Tự động hóa UI</h3>
+<div class="space-y-3">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-on-surface-variant text-sm">Hệ thống phân rã component JSON cho Wiki động.</p>
 </div>
-<!-- Requirements Bento -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div class="p-6 bg-surface-container rounded-xl border border-outline-variant/10">
-<h4 class="text-primary font-bold mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">check_circle</span> Requirements
-                                </h4>
-<ul class="space-y-2 text-sm text-on-surface-variant">
-<li class="flex justify-between"><span>Spigot/Paper</span> <span class="text-secondary">1.21.8+</span></li>
-<li class="flex justify-between"><span>Java</span> <span class="text-secondary">21+</span></li>
-<li class="flex justify-between"><span>Dependencies</span> <span class="text-secondary">MMOItems, MythicLib</span></li>
-</ul>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-on-surface-variant text-sm">Tự động hóa ánh xạ style Tailwind CSS từ tệp cấu hình.</p>
 </div>
-<div class="p-6 bg-surface-container-low rounded-xl border border-error/10">
-<h4 class="text-error font-bold mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">cancel</span> Not Supported
-                                </h4>
-<ul class="space-y-2 text-sm text-on-surface-variant">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-error rounded-full"></span> Folia Platform</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-error rounded-full"></span> Forge/Fabric Hybrid</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-error rounded-full"></span> Legacy Java versions (&lt;21)</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- Side Info / Quick Links -->
-<div class="space-y-6">
-<div class="p-6 glass-card rounded-xl border border-primary/10">
-<h3 class="font-headline font-bold text-on-surface mb-4">Plugin Specs</h3>
-<div class="space-y-4">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">bolt</span>
-</div>
-<div>
-<div class="text-[10px] text-zinc-500 uppercase">Performance</div>
-<div class="text-sm font-medium">Asynchronous Logic</div>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
-<span class="material-symbols-outlined">database</span>
-</div>
-<div>
-<div class="text-[10px] text-zinc-500 uppercase">Storage</div>
-<div class="text-sm font-medium">VietStorage Integration</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-on-surface-variant text-sm">Cải thiện độ trễ rendering layout phức tạp thêm 40%.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
+<!-- Version v1.0.1 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center justify-between">
+<div class="hidden md:block w-[45%] text-left pl-12">
+<span class="text-primary font-headline text-lg font-bold">12 Tháng 04, 2024</span>
+<h2 class="text-2xl font-bold text-on-surface mt-2">Nâng cấp giao diện người chơi</h2>
 </div>
-</section>
-<!-- Features Section -->
-<section class="mb-20" id="features">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-headline font-bold text-on-surface uppercase tracking-widest mb-2">Hệ Thống Tính Năng</h2>
-<div class="h-1 w-24 bg-primary mx-auto"></div>
+<div class="z-10 absolute left-4 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high border-2 border-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="palette" style="font-variation-settings: 'FILL' 1;">palette</span>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Feature Card 1 -->
-<div class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-<span class="material-symbols-outlined text-6xl">upgrade</span>
 </div>
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">sync_alt</span>
+<div class="pl-12 md:pl-0 md:w-[45%]">
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all group">
+<div class="flex items-center gap-2 md:hidden mb-2">
+<span class="text-primary font-bold text-sm">v1.0.1</span>
+<span class="text-on-surface-variant text-xs">• 12/04/2024</span>
 </div>
-<h3 class="text-xl font-headline font-bold mb-3">Trao đổi &amp; Nâng cấp</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Hệ thống Auto-Detect Level thông minh tự động nhận diện cấp độ vật phẩm và áp dụng Recipe phù hợp.</p>
+<h3 class="text-xl font-bold text-primary mb-3 md:hidden">Nâng cấp giao diện người chơi</h3>
+<div class="space-y-3">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-on-surface-variant text-sm">Thiết kế lại toàn bộ hệ thống menu bằng Glassmorphism.</p>
 </div>
-<!-- Feature Card 2 -->
-<div class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">percent</span>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-on-surface-variant text-sm">Tích hợp Material Symbols thay thế icon bitmap cũ.</p>
 </div>
-<h3 class="text-xl font-headline font-bold mb-3">Tỉ lệ thành công</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Thiết lập xác suất thành công chi tiết cho từng bậc nâng cấp, bao gồm tỉ lệ thất bại và giữ nguyên cấp.</p>
 </div>
-<!-- Feature Card 3 -->
-<div class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">keyboard_double_arrow_right</span>
 </div>
-<h3 class="text-xl font-headline font-bold mb-3">Shift Exchange</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Tối ưu hóa quy trình với khả năng nâng cấp hàng loạt vật phẩm chỉ với một lần nhấp chuột (Shift + Click).</p>
 </div>
-<!-- Feature Card 4 -->
-<div class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">content_cut</span>
 </div>
-<h3 class="text-xl font-headline font-bold mb-3">Phân rã vật phẩm</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Cho phép người chơi phá hủy các trang bị cũ để thu hồi nguyên liệu quý hiếm theo tỉ lệ tùy chỉnh.</p>
+<!-- Version v1.0.0 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between">
+<div class="hidden md:block w-[45%] text-right pr-12">
+<span class="text-primary font-headline text-lg font-bold">01 Tháng 01, 2024</span>
+<h2 class="text-2xl font-bold text-on-surface mt-2">Phát hành chính thức</h2>
 </div>
-<!-- Feature Card 5 -->
-<div class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">rocket_launch</span>
+<div class="z-10 absolute left-4 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
+<div class="w-10 h-10 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="rocket_launch" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
 </div>
-<h3 class="text-xl font-headline font-bold mb-3">Hệ thống Booster</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Vật phẩm bổ trợ giúp tăng tỉ lệ thành công hoặc bảo vệ trang bị không bị mất khi nâng cấp thất bại.</p>
 </div>
-<!-- Feature Card 6 -->
-<a class="group p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:-translate-y-2 transition-all duration-300 hover:border-primary/30 relative overflow-hidden block text-left" href="#">
-<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined">drag_pan</span>
+<div class="pl-12 md:pl-0 md:w-[45%]">
+<div class="bg-surface-container-high p-6 rounded-xl border-l-4 border-primary transition-all group">
+<div class="flex items-center gap-2 md:hidden mb-2">
+<span class="text-primary font-bold text-sm">v1.0.0</span>
+<span class="text-on-surface-variant text-xs">• 01/01/2024</span>
 </div>
-<h3 class="text-xl font-headline font-bold mb-3">Editor GUI</h3>
-<p class="text-on-surface-variant text-sm leading-relaxed">Trình chỉnh sửa ngay trong game với giao diện kéo-thả, loại bỏ nhu cầu chỉnh sửa file config phức tạp.</p>
-</a>
+<h3 class="text-xl font-bold text-primary mb-3 md:hidden">Phát hành chính thức</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+                                Cột mốc quan trọng đánh dấu sự ổn định của core engine. VietCraftUpgrade chính thức hỗ trợ đa nền tảng và các plugin mở rộng bên thứ ba.
+                            </p>
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">LTS</span>
+<span class="px-2 py-1 rounded bg-surface-variant text-on-surface-variant text-[10px] font-bold uppercase tracking-wider">Stable</span>
 </div>
-</section>
-<!-- Command Block Style Section -->
-<section class="mb-20">
-<div class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/20 shadow-2xl">
-<div class="flex items-center gap-2 mb-6">
-<div class="w-3 h-3 rounded-full bg-error"></div>
-<div class="w-3 h-3 rounded-full bg-tertiary"></div>
-<div class="w-3 h-3 rounded-full bg-primary"></div>
-<span class="ml-4 text-zinc-600 font-mono text-sm">config_example.yml</span>
 </div>
-<pre class="font-mono text-sm overflow-x-auto text-on-surface-variant leading-relaxed"><span class="text-tertiary">&gt; upgrade-settings:</span>
-    <span class="text-primary-dim">enabled:</span> true
-    <span class="text-primary-dim">broadcast-success:</span> true
-    <span class="text-primary-dim">sound-effect:</span> 'BLOCK_ANVIL_USE'
-    <span class="text-primary-dim">particle:</span> 'FLAME'
-
-<span class="text-tertiary">&gt; recipe-auto-create:</span>
-    <span class="text-primary-dim">prefix:</span> 'LEGENDARY_'
-    <span class="text-primary-dim">levels:</span> 1-20
-    <span class="text-primary-dim">material-cost:</span> 'NETHER_STAR'</pre>
 </div>
-</section>
+</div>
+<!-- Version v0.9.0 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center justify-between opacity-70">
+<div class="hidden md:block w-[45%] text-left pl-12">
+<span class="text-on-surface-variant font-headline text-lg font-bold">15 Tháng 11, 2023</span>
+<h2 class="text-2xl font-bold text-on-surface mt-2">Beta Release</h2>
+</div>
+<div class="z-10 absolute left-4 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-outline"></div>
+</div>
+</div>
+<div class="pl-12 md:pl-0 md:w-[45%]">
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/5">
+<h3 class="text-lg font-bold text-on-surface-variant mb-2">Thử nghiệm cộng đồng</h3>
+<p class="text-on-surface-variant/80 text-sm italic">
+                                Thu thập phản hồi từ hơn 500 người chơi đầu tiên để tinh chỉnh cân bằng gameplay.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Version v0.8.0 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between opacity-50">
+<div class="hidden md:block w-[45%] text-right pr-12">
+<span class="text-on-surface-variant font-headline text-lg font-bold">01 Tháng 09, 2023</span>
+<h2 class="text-2xl font-bold text-on-surface mt-2">Alpha Testing</h2>
+</div>
+<div class="z-10 absolute left-4 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-outline"></div>
+</div>
+</div>
+<div class="pl-12 md:pl-0 md:w-[45%]">
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/5">
+<h3 class="text-lg font-bold text-on-surface-variant mb-2">Alpha v0.8.0</h3>
+<p class="text-on-surface-variant/80 text-sm">Triển khai cơ sở hạ tầng backend và quản lý quyền hạn.</p>
+</div>
+</div>
+</div>
+<!-- Version v0.7.0 -->
+<div class="relative flex flex-col md:flex-row-reverse items-center justify-between opacity-30">
+<div class="hidden md:block w-[45%] text-left pl-12">
+<span class="text-on-surface-variant font-headline text-lg font-bold">20 Tháng 06, 2023</span>
+<h2 class="text-2xl font-bold text-on-surface mt-2">Prototype</h2>
+</div>
+<div class="z-10 absolute left-4 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-outline"></div>
+</div>
+</div>
+<div class="pl-12 md:pl-0 md:w-[45%]">
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/5">
+<h3 class="text-lg font-bold text-on-surface-variant mb-2">First Commit</h3>
+<p class="text-on-surface-variant/80 text-sm">Khởi tạo project và xây dựng khung kỹ thuật cơ bản.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Info -->
 </main>
 
     <!-- Donation Modal -->

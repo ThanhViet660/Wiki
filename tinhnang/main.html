@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="wiki-prefix" content="../"/>
+    <title>VietCraftUpgrade Wiki</title>
+    <!-- ANTI-FOUC (Flash of Unstyled Content) -->
+    <script>document.documentElement.classList.add('js-enabled');</script>
+    <style>
+        html.js-enabled body { opacity: 0; visibility: hidden; }
+        html.js-enabled body.page-ready { opacity: 1; visibility: visible; transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+    <!-- Theme (must load before render) -->
+    <script src="../assets/js/theme.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=block" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet"/>
+    <script src="../assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/search.js" defer></script>
+    <script src="../assets/js/animations.js" defer></script>
+    
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 w-full z-50 h-16 bg-[#0e0e0e]/80 backdrop-blur-xl border-b border-[#ff8f73]/15">
+        <div class="flex justify-between items-center px-8 w-full max-w-[1440px] mx-auto h-full">
+            <div class="flex items-center gap-8">
+                <a href="../index.html" class="text-xl font-black text-[#ff8f73] tracking-tighter font-headline uppercase hover:opacity-80 transition-opacity">VietCraftUpgrade Wiki</a>
+                <nav class="hidden md:flex gap-4">
+                    <button onclick="document.getElementById('donate-modal').classList.remove('hidden')" class="font-['Space_Grotesk'] uppercase tracking-wider text-sm font-bold text-[#adaaaa] hover:text-[#ff8f73] transition-colors flex items-center gap-1.5 cursor-pointer"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1;">favorite</span>Ủng hộ</button>
+                    <a href="https://discord.gg/" target="_blank" class="font-['Space_Grotesk'] uppercase tracking-wider text-sm font-bold text-[#adaaaa] hover:text-[#5865F2] transition-colors flex items-center gap-1.5"><span class="material-symbols-outlined text-base">forum</span>Discord</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-3">
+                <!-- Search -->
+                <div class="relative hidden lg:block search-wrapper">
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" style="margin-top: -1px;">search</span>
+                    <input id="wiki-search-input" type="text" placeholder="Tìm kiếm..." class="bg-surface-container border-none rounded-lg pl-10 pr-16 py-1.5 text-sm w-64 focus:ring-1 focus:ring-primary outline-none transition-all focus:w-80">
+                    <kbd class="search-kbd absolute right-3 top-1/2 -translate-y-1/2">Ctrl K</kbd>
+                    <div id="wiki-search-results" class="search-results-dropdown"></div>
+                </div>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle text-on-surface-variant hover:bg-[#1a1a1a] p-2 rounded-lg transition-all flex items-center justify-center scale-95 active:scale-90" aria-label="Toggle theme">
+                    <span class="material-symbols-outlined icon-sun" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+                    <span class="material-symbols-outlined icon-moon">dark_mode</span>
+                </button>
+                <!-- Mobile Sidebar Toggle -->
+                <button onclick="document.getElementById('mobile-sidebar').classList.toggle('-translate-x-full')" class="md:hidden text-on-surface-variant hover:bg-[#1a1a1a] p-2 rounded-lg transition-all flex items-center justify-center scale-95 active:scale-90" aria-label="Toggle Menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside id="mobile-sidebar" class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 border-r border-[#ff8f73]/10 bg-[#0e0e0e]/95 backdrop-blur-xl transition-transform duration-300 -translate-x-full md:translate-x-0 z-40 overflow-y-auto custom-scrollbar">
+        <div class="flex flex-col py-6">
+            <div class="px-6 mb-8 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden border border-outline-variant/20">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh0A0eHeGnOAcVE6EtVAY1Xvv0nMcp0NGm7EORQxZZtIiF8tpzqhzZ33rki7BIUW5ljFqNSe_gy7PbpddAvZjuxaZDSwjCIhfOqkjvjdIIMbyrvLepeVwcMnGoGDOM70geOhyDgw_HYnnWRDyjA5O4XnG4fTFoDK5bbTu1E3MqNzgWIdxIWh7YlOHjsWec5lPXK1cQmvxt_4Lf4TTuHKBU0cMzSw1EtWfLkVmqYwbBHt2kBsfZXjq7jn1MBM8GHQTPGEGca_9qg5o" alt="Plugin Icon" class="w-8 h-8" data-alt="Geometric abstract logo icon with sharp orange and black shapes on a dark background">
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-[#ff8f73] font-headline leading-tight">VietCraftUpgrade</h3>
+                    <p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">Technical Wiki v2.0</p>
+                </div>
+            </div>
+            
+            <nav class="space-y-1">
+                <a href="../index.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
+                    <span class="material-symbols-outlined text-[20px]">info</span>Giới thiệu
+                </a>
+                
+                <div class="flex flex-col">
+                    <button class="w-full flex items-center justify-between text-[#ff8f73] bg-[#1a1a1a] border-l-2 border-[#ff8f73] ml-[-1px] px-6 py-3 transition-all cursor-pointer group">
+                        <div class="flex items-center gap-3 group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">extension</span>
+                            <span class="font-medium text-sm">Tính năng</span>
+                        </div>
+                        <span class="material-symbols-outlined text-[20px] transition-transform duration-200 rotate-[180deg]" id="features-icon">expand_more</span>
+                    </button>
+                    <div class="flex flex-col bg-[#0a0a0a]/50 " id="features-menu">
+                        <a href="../tinhnang/main.html" class="text-[#ff8f73] border-l-2 border-[#ff8f73] bg-[#1a1a1a] ml-[-2px] pl-[3.5rem] pr-6 py-2.5 text-sm font-medium transition-colors items-center flex gap-3">
+                            Tổng quan
+                        </a>
+                        <a href="../tinhnang/trao-doi.html" class="text-[#adaaaa] hover:bg-[#1a1a1a] hover:text-[#ff8f73] pl-[3.5rem] pr-6 py-2.5 text-sm font-medium transition-colors items-center flex gap-3">
+                            Trao đổi &amp; Nâng cấp
+                        </a>
+                        <a href="../tinhnang/phan-ra.html" class="text-[#adaaaa] hover:bg-[#1a1a1a] hover:text-[#ff8f73] pl-[3.5rem] pr-6 py-2.5 text-sm font-medium transition-colors items-center flex gap-3">
+                            Phân rã vật phẩm
+                        </a>
+                        <a href="../tinhnang/hooks.html" class="text-[#adaaaa] hover:bg-[#1a1a1a] hover:text-[#ff8f73] pl-[3.5rem] pr-6 py-2.5 text-sm font-medium transition-colors items-center flex gap-3">
+                            Hooks (API)
+                        </a>
+                    </div>
+                </div>
+
+                <a href="../lenh-quyen.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
+                    <span class="material-symbols-outlined text-[20px]">terminal</span>Lệnh &amp; Quyền
+                </a>
+                <a href="../cau-hinh.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
+                    <span class="material-symbols-outlined text-[20px]">settings_input_component</span>Cấu hình
+                </a>
+                <a href="../cai-dat.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
+                    <span class="material-symbols-outlined text-[20px]">download</span>Cài đặt
+                </a>
+                <a href="../huong-dan.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
+                    <span class="material-symbols-outlined text-[20px]">menu_book</span>Hướng dẫn GUI
+                </a>
+                <a href="../lich-su.html" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-white hover:translate-x-1 transition-transform duration-200 font-medium text-sm">
+                    <span class="material-symbols-outlined text-[20px]">history</span>Lịch sử
+                </a>
+                
+                <!-- Mobile only links -->
+                <div class="md:hidden mt-4 border-t border-[#ff8f73]/10 pt-4 space-y-1">
+                    <button onclick="document.getElementById('donate-modal').classList.remove('hidden'); document.getElementById('mobile-sidebar').classList.add('-translate-x-full')" class="w-full text-left flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-[#ff8f73] transition-colors font-medium text-sm">
+                        <span class="material-symbols-outlined text-[20px]" style="font-variation-settings:'FILL' 1;">favorite</span>Ủng hộ
+                    </button>
+                    <a href="https://discord.gg/" target="_blank" class="flex items-center gap-3 text-[#adaaaa] px-6 py-3 hover:bg-[#131313] hover:text-[#5865F2] transition-colors font-medium text-sm">
+                        <span class="material-symbols-outlined text-[20px]">forum</span>Discord
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Main Content Canvas -->
+    <main class="lg:ml-64 pt-24 pb-20 px-6 lg:px-12 min-h-screen">
+<div class="max-w-6xl mx-auto">
+<!-- Hero Header Section -->
+<header class="mb-16 relative">
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/10 blur-[100px] rounded-full pointer-events-none"></div>
+<h1 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4 text-on-surface">
+                    Tính năng <span class="text-primary">Nổi bật</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">
+                    Khám phá sức mạnh của VietCraftUpgrade thông qua bộ công cụ tối ưu hóa gameplay dành riêng cho cộng đồng Minecraft Việt Nam.
+                </p>
+</header>
+<!-- Features Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Feature 1: Trao đổi & Nâng cấp -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl glass-card border border-outline-variant/20 glow-hover transition-all duration-300">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="p-8 h-full flex flex-col justify-between relative z-10">
+<div>
+<div class="w-14 h-14 rounded-lg bg-surface-container-high flex items-center justify-center mb-6 border border-primary/20">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="swap_calls">swap_calls</span>
+</div>
+<h2 class="font-headline text-3xl font-bold mb-4">Trao đổi &amp; Nâng cấp</h2>
+<p class="text-on-surface-variant leading-relaxed max-w-lg mb-8">
+                                Hệ thống giao dịch thông minh cho phép người chơi nâng cấp trang bị lên các cấp độ huyền thoại bằng cách sử dụng nguyên liệu thu thập được từ thế giới. Tùy biến tỷ lệ thành công và các chỉ số cộng thêm cực kỳ chi tiết.
+                            </p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<ul class="flex gap-4 text-xs font-label uppercase tracking-widest text-primary">
+<li>Custom UI</li>
+<li>Leveling</li>
+<li>Stat Boosts</li>
+</ul>
+<a class="flex items-center gap-2 text-on-surface hover:text-primary transition-colors font-headline font-bold" href="trao-doi.html">
+                                CHI TIẾT <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Feature 2: Phân rã vật phẩm -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container border border-outline-variant/20 glow-hover transition-all duration-300">
+<div class="p-8 h-full flex flex-col relative z-10">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center mb-6 border border-error/20">
+<span class="material-symbols-outlined text-2xl text-error" data-icon="science">science</span>
+</div>
+<h2 class="font-headline text-2xl font-bold mb-4">Phân rã</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8 flex-grow">
+                            Tận dụng tối đa tài nguyên từ các vật phẩm không còn sử dụng. Hệ thống phân rã cho phép trả lại một phần nguyên liệu gốc hoặc tinh thể năng lượng đặc biệt.
+                        </p>
+<a class="flex items-center gap-2 text-on-surface hover:text-primary transition-colors font-headline font-bold text-sm mt-4" href="phan-ra.html">
+                            TÀI LIỆU <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Feature 3: Hooks -->
+<div class="md:col-span-12 group relative overflow-hidden rounded-xl glass-card border border-outline-variant/20 glow-hover transition-all duration-300">
+<div class="grid md:grid-cols-2">
+<div class="p-8 lg:p-12">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center border border-tertiary/20">
+<span class="material-symbols-outlined text-2xl text-tertiary" data-icon="webhook">webhook</span>
+</div>
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">Developer Core</span>
+</div>
+<h2 class="font-headline text-4xl font-black mb-6 uppercase tracking-tight">Hooks System</h2>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                                API mạnh mẽ dành cho các nhà phát triển plugin khác. Tích hợp sâu vào hệ thống sự kiện của VietCraftUpgrade để tạo ra những tính năng tùy biến không giới hạn. Tương thích hoàn toàn với PlaceholderAPI và Vault.
+                            </p>
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-white/5 mb-8">
+<code class="font-mono text-sm text-tertiary">
+<span class="text-zinc-500">// Example Hook</span><br/>
+                                    @EventHandler<br/>
+                                    public void onUpgrade(UpgradeEvent event) { ... }
+                                </code>
+</div>
+<a class="inline-flex items-center justify-center px-8 py-3 bg-primary/10 border border-primary/20 text-primary font-headline font-bold rounded hover:bg-primary hover:text-on-primary transition-all duration-300" href="hooks.html">
+                                XEM API DOCS
+                            </a>
+</div>
+<div class="hidden md:block relative bg-surface-container-high overflow-hidden">
+<img alt="Tech Background" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" data-alt="abstract close-up of complex server hardware circuits and blue glowing lights in a dark data center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTcxOwv6qN5NFw9u_heBEc-y-tjCumWYw-AnpqBLePxFjSPKhLNH_mIJXpXjr-lt6VXM0lmdGwcxtc3pz66GdZ8D2mrHgN3rFejJ6RNlW6K94TN_Ar0IJ5CvRE4iOhIhNyteHQLzgD_1R9FzS4xGuzTcn-M0PzRvuI1T6SHlG0tHl4QFJQSPNr1mcM2zP_1D8-ynb-b6tutDOKm8EG5N8DMTEng-lF15HfzOn3yHEbno0Ydta4INPx9YzDMGOeDP9nPR-DlzPPlsg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-high via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Additional Mini Grid -->
+<section class="mt-20">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-px flex-grow bg-white/10"></div>
+<span class="font-headline text-sm font-bold uppercase tracking-widest text-zinc-500">Và còn nhiều hơn thế</span>
+<div class="h-px flex-grow bg-white/10"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="p-6 bg-surface-container border border-white/5 rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="speed">speed</span>
+<h4 class="font-headline font-bold mb-2">Performance</h4>
+<p class="text-xs text-on-surface-variant">Tối ưu hóa tài nguyên server, không gây giật lag.</p>
+</div>
+<div class="p-6 bg-surface-container border border-white/5 rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="translate">translate</span>
+<h4 class="font-headline font-bold mb-2">Localization</h4>
+<p class="text-xs text-on-surface-variant">Hỗ trợ 100% tiếng Việt có dấu chuẩn UTF-8.</p>
+</div>
+<div class="p-6 bg-surface-container border border-white/5 rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="security">security</span>
+<h4 class="font-headline font-bold mb-2">Security</h4>
+<p class="text-xs text-on-surface-variant">Chống lỗi dup vật phẩm và can thiệp trái phép.</p>
+</div>
+<div class="p-6 bg-surface-container border border-white/5 rounded-lg hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="update">update</span>
+<h4 class="font-headline font-bold mb-2">Auto Update</h4>
+<p class="text-xs text-on-surface-variant">Luôn cập nhật các tính năng mới nhất từ cộng đồng.</p>
+</div>
+</div>
+</section>
+<!-- Page Navigation -->
+<nav class="mt-20 flex justify-end">
+<a class="group flex items-center gap-4 p-6 bg-surface-container rounded-xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-300 max-w-sm w-full" href="trao-doi.html">
+<div class="flex-1 text-right">
+<span class="text-xs text-on-surface-variant uppercase tracking-widest font-label">Tiếp theo</span>
+<h4 class="font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Trao đổi &amp; Nâng cấp</h4>
+</div>
+<span class="material-symbols-outlined text-primary text-2xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</nav>
+</div>
+</main>
+
+    <!-- Donation Modal -->
+    <div id="donate-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="document.getElementById('donate-modal').classList.add('hidden')"></div>
+        <div class="relative bg-[#141414] border border-[#ff8f73]/20 rounded-2xl p-8 max-w-sm w-full shadow-2xl shadow-primary/10 animate-[page-slide-up_0.4s_ease]">
+            <button onclick="document.getElementById('donate-modal').classList.add('hidden')" class="absolute top-4 right-4 material-symbols-outlined text-on-surface-variant hover:text-white transition-colors cursor-pointer">close</button>
+            <div class="text-center mb-6">
+                <span class="material-symbols-outlined text-[#ff8f73] text-4xl mb-3" style="font-variation-settings:'FILL' 1;">favorite</span>
+                <h3 class="text-xl font-black font-headline uppercase text-white">Ủng hộ VCU</h3>
+                <p class="text-sm text-on-surface-variant mt-2">Quét mã QR để ủng hộ qua Vietcombank</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 mx-auto w-fit">
+                <img src="https://qr.sepay.vn/img?bank=Vietcombank&acc=1797702292&template=qronly&amount=&des=" alt="QR Vietcombank" class="w-56 h-56 object-contain"/>
+            </div>
+            <div class="mt-6 text-center space-y-1">
+                <p class="text-sm font-bold text-white">STK: 1797702292</p>
+                <p class="text-xs text-on-surface-variant">Ngân hàng Vietcombank</p>
+            </div>
+            <p class="mt-4 text-[10px] text-center text-zinc-600 uppercase tracking-widest">Cảm ơn sự ủng hộ của bạn ♥</p>
+        </div>
+    </div>
+
+    <!-- Unified Premium Footer -->
+    <footer class="site-footer lg:ml-64 py-12 px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex flex-col items-center md:items-start gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">diamond</span>
+                        </div>
+                        <span class="text-lg font-black text-primary font-headline tracking-tighter uppercase">VietCraftUpgrade</span>
+                    </div>
+                    <p class="text-xs text-zinc-500 font-body max-w-xs text-center md:text-left">
+                        Plugin nâng cấp vật phẩm chuyên nghiệp dành cho cộng đồng Minecraft Việt Nam.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center md:items-end gap-4">
+                    <div class="flex gap-6">
+                        <a class="footer-link text-xs font-medium text-zinc-500 hover:text-primary transition-colors" href="#">GitHub</a>
+                        <a class="footer-link text-xs font-medium text-zinc-500 hover:text-primary transition-colors" href="#">Discord</a>
+                        <a class="footer-link text-xs font-medium text-zinc-500 hover:text-primary transition-colors" href="#">SpigotMC</a>
+                        <a class="footer-link text-xs font-medium text-zinc-500 hover:text-primary transition-colors" href="../index.html">Wiki</a>
+                    </div>
+                    <p class="text-[10px] text-zinc-600 font-body uppercase tracking-widest">
+                        &copy; 2024 VietCraftUpgrade Team &mdash; All rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </footer>
+</body>
+</html>
